@@ -8,6 +8,9 @@
     "start": "tsdx watch",
     "test": "tsdx test --env=jsdom"
   },
+  "dependencies": {
+    "load-asset": "^1.2.0"
+  },
   "devDependencies": {
     "@testing-library/react": "^9.2.0",
     "@types/jest": "^24.0.18",
@@ -48,8 +51,5 @@
     "trailingComma": "es5"
   },
   "repository": "https://github.com/uetchy/microhooks.git",
-  "typings": "dist/index.d.ts",
-  "dependencies": {
-    "load-asset": "^1.2.0"
-  }
+  "typings": "dist/index.d.ts"
 }

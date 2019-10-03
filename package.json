@@ -1,7 +1,7 @@
 {
   "name": "microhooks",
   "description": "A collection of useful React Hooks",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "scripts": {
     "build": "tsdx build",
     "lint": "tsdx lint",

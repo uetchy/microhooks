@@ -1,6 +1,6 @@
 # microhooks
 
-A collection of useful React Hooks.
+A tiny collection of useful React Hooks.
 
 ## Install
 
@@ -10,14 +10,18 @@ yarn add microhooks
 
 ## Hooks
 
-### useDefferedState
+### useDeferredState
+
+Function as `useState` but will be deferred for the specific amount of time to avoid excessing API limit.
 
 ```tsx
+import { useDeferredState } from 'microhooks';
+
 const Form: React.FC = () => {
-  const [query, setQuery] = useDeferredState(500, '');
+  const [query, setQuery] = useDeferredState(500, 'Initial value');
 
   useEffect(() => {
-    fetch(`https://example.com/api`)
+    fetch(`https://example.com/api?query=${query}`)
       .then(response => response.json())
       .then(json => {
         console.log(json);
@@ -34,7 +38,11 @@ const Form: React.FC = () => {
 
 ### useTakeEffect
 
+Unlike `useEffect`, `useTakeEffect` will be called when all of the given props are neither `undefined` nor `null`.
+
 ```tsx
+import { useTakeEffect } from 'microhooks';
+
 const App: React.FC = () => {
   const ref = useRef<HTMLDivElement>(null);
 
@@ -48,7 +56,11 @@ const App: React.FC = () => {
 
 ### usePrefetch
 
+Prefetch any kind of media for the cache.
+
 ```tsx
+import { usePrefetch } from 'microhooks';
+
 const App: React.FC = () => {
   usePrefetch({
     logo: './assets/logo.png',
@@ -59,7 +71,11 @@ const App: React.FC = () => {
 
 ### useWindowBounds
 
+Obtain width and height of a browser window and keep updating them.
+
 ```tsx
+import { useWindowBounds } from 'microhooks';
+
 const App: React.FC = () => {
   const { width, height } = useWindowBounds();
 
@@ -69,7 +85,11 @@ const App: React.FC = () => {
 
 ### useInlineSVG
 
+Thanks to the power of webpack, `useInlineSVG` can be used as a SVG container factory.
+
 ```tsx
+import { useInlineSVG } from 'microhooks';
+
 import LogoSVG from './assets/logo.svg';
 
 const App: React.FC = () => {

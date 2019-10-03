@@ -23,7 +23,7 @@ function useDeferredState(duration, initialValue) {
 function useTakeEffect(fn, deps) {
   useEffect(function () {
     if (deps.some(function (d) {
-      return !d;
+      return d === undefined || d === null;
     })) return;
     var destructor = fn();
     return function () {
@@ -34,7 +34,7 @@ function useTakeEffect(fn, deps) {
 function usePrefetch(assets) {
   useEffect(function () {
     load.all(assets);
-  }, []);
+  }, [assets]);
 }
 /**
  * const {width, height} = useBounds();

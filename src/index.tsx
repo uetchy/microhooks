@@ -27,7 +27,7 @@ export function useTakeEffect(
   deps: React.DependencyList
 ) {
   useEffect(() => {
-    if (deps.some(d => !d)) return;
+    if (deps.some(d => d === undefined || d === null)) return;
     const destructor = fn();
     return () => {
       destructor && destructor();
@@ -43,7 +43,7 @@ interface Asset {
 export function usePrefetch(assets: Asset[]): void {
   useEffect((): void => {
     load.all(assets);
-  }, []);
+  }, [assets]);
 }
 
 export interface Bounds {

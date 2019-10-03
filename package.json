@@ -31,11 +31,6 @@
     "dist"
   ],
   "homepage": "https://github.com/uetchy/microhooks",
-  "husky": {
-    "hooks": {
-      "pre-commit": "tsdx lint"
-    }
-  },
   "keywords": [
     "hooks",
     "react"

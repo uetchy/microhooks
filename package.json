@@ -7,7 +7,7 @@
     "build": "tsdx build",
     "lint": "tsdx lint",
     "start": "tsdx watch",
-    "test": "tsdx test --env=jsdom"
+    "test": "tsdx test --env=jest-environment-jsdom-sixteen"
   },
   "dependencies": {
     "load-asset": "^1.2.0"
@@ -21,6 +21,7 @@
     "@types/react": "^16.9.41",
     "@types/react-dom": "^16.9.8",
     "husky": "^4.2.5",
+    "jest-environment-jsdom-sixteen": "^1.0.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "tsdx": "^0.13.2",

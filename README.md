@@ -8,9 +8,9 @@ A tiny collection of useful React Hooks.
 yarn add microhooks
 ```
 
-## Hooks
+## API
 
-### useDeferredState
+### `useDeferredState`
 
 Function as `useState` but will be deferred for the specific amount of time to avoid excessing API limit.
 
@@ -36,7 +36,7 @@ const Form: React.FC = () => {
 };
 ```
 
-### useTakeEffect
+### `useTakeEffect`
 
 Unlike `useEffect`, `useTakeEffect` will be called when all of the given props are neither `undefined` nor `null`.
 
@@ -54,7 +54,7 @@ const App: React.FC = () => {
 };
 ```
 
-### usePrefetch
+### `usePrefetch`
 
 Prefetch any kind of media for the cache.
 
@@ -69,7 +69,7 @@ const App: React.FC = () => {
 };
 ```
 
-### useWindowBounds
+### `useWindowBounds`
 
 Obtain width and height of a browser window and keep updating them.
 
@@ -83,7 +83,7 @@ const App: React.FC = () => {
 };
 ```
 
-### useInlineSVG
+### `useInlineSVG`
 
 Thanks to the power of webpack, `useInlineSVG` can be used as a SVG container factory.
 

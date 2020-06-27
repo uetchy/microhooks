@@ -4,7 +4,7 @@ import load from 'load-asset';
 
 export function useDeferredState<T>(
   duration: number,
-  initialValue: T
+  initialValue: T,
 ): [T, React.Dispatch<React.SetStateAction<T>>] {
   const [response, setResponse] = useState<T>(initialValue);
   const [innerValue, setInnerValue] = useState<T>(initialValue);
@@ -24,10 +24,10 @@ export function useDeferredState<T>(
 
 export function useTakeEffect(
   fn: () => void | (() => void),
-  deps: React.DependencyList
+  deps: React.DependencyList,
 ) {
   useEffect(() => {
-    if (deps.some(d => d === undefined || d === null)) return;
+    if (deps.some((d) => d === undefined || d === null)) return;
     const destructor = fn();
     return () => {
       destructor && destructor();
@@ -80,7 +80,7 @@ export function useWindowBounds(): Bounds {
 
 export function useInlineSVG(
   svgString: string,
-  styles = {}
+  styles = {},
 ): () => React.ReactNode {
   const svgContainerRef = useRef<HTMLDivElement>(null);
 

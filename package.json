@@ -16,7 +16,7 @@
     "react": ">=16"
   },
   "devDependencies": {
-    "@testing-library/react": "^10.4.3",
+    "@testing-library/react": "^10.4.4",
     "@types/jest": "^26.0.3",
     "@types/react": "^16.9.41",
     "@types/react-dom": "^16.9.8",
@@ -26,7 +26,7 @@
     "react-dom": "^16.13.1",
     "tsdx": "^0.13.2",
     "tslib": "^2.0.0",
-    "typescript": "^3.9.5"
+    "typescript": "^3.9.6"
   },
   "main": "dist/index.js",
   "module": "dist/microhooks.esm.js",

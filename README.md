@@ -64,7 +64,7 @@ import { usePrefetch } from 'microhooks';
 const App: React.FC = () => {
   usePrefetch({
     logo: './assets/logo.png',
-    bg: './assets/background.png',
+    bg: './assets/background.png'
   });
 };
 ```
@@ -103,3 +103,7 @@ const App: React.FC = () => {
   );
 };
 ```
+
+## Contribution
+
+See [Contribution Guide](./CONTRIBUTING.md).

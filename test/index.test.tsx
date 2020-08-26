@@ -17,7 +17,7 @@ describe('useDeferredState', () => {
     const { container, getByTestId } = render(<App />);
     expect(getByTestId('root').textContent).toBe('0');
     await waitFor(() => expect(getByTestId('root').textContent).toBe('3'), {
-      container,
+      container
     });
     // ReactDOM.render(<div></div>, div);
     // ReactDOM.unmountComponentAtNode(div);

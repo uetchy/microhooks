@@ -9,6 +9,9 @@
     "start": "tsdx watch",
     "test": "tsdx test --env=jest-environment-jsdom-sixteen"
   },
+  "main": "dist/microhooks.cjs.production.min.js",
+  "module": "dist/microhooks.esm.js",
+  "files": ["dist"],
   "dependencies": {
     "load-asset": "^1.2.0"
   },
@@ -16,30 +19,21 @@
     "react": ">=16"
   },
   "devDependencies": {
-    "@testing-library/react": "^10.4.4",
-    "@types/jest": "^26.0.3",
-    "@types/react": "^16.9.41",
+    "@testing-library/react": "^10.4.9",
+    "@types/jest": "^26.0.10",
+    "@types/react": "^16.9.47",
     "@types/react-dom": "^16.9.8",
     "husky": "^4.2.5",
     "jest-environment-jsdom-sixteen": "^1.0.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "tsdx": "^0.13.2",
-    "tslib": "^2.0.0",
-    "typescript": "^3.9.6"
+    "tsdx": "^0.13.3",
+    "typescript": "^4.0.2"
   },
-  "main": "dist/index.js",
-  "module": "dist/microhooks.esm.js",
-  "files": [
-    "dist"
-  ],
+  "homepage": "https://github.com/uetchy/microhooks",
   "repository": "https://github.com/uetchy/microhooks.git",
   "bugs": "https://github.com/uetchy/microhooks/issues",
-  "homepage": "https://github.com/uetchy/microhooks",
-  "keywords": [
-    "hooks",
-    "react"
-  ],
   "license": "Apache-2.0",
+  "keywords": ["hooks", "react"],
   "typings": "dist/index.d.ts"
 }
